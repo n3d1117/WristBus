@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1133D60DEA958D3C7A004347 /* Pods_watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F7FB9783510CECB050EAA4 /* Pods_watch_Extension.framework */; };
+		812055EA204F222400EF6DBE /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812055E7204F222300EF6DBE /* Detail.swift */; };
+		812055EB204F222400EF6DBE /* TransitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812055E8204F222300EF6DBE /* TransitRow.swift */; };
+		812055EC204F222400EF6DBE /* BusStopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812055E9204F222400EF6DBE /* BusStopRow.swift */; };
 		8135216E204DC7B600C191F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8135216D204DC7B600C191F1 /* AppDelegate.swift */; };
 		81352173204DC7B600C191F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81352171204DC7B600C191F1 /* Main.storyboard */; };
 		81352175204DC7B600C191F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81352174204DC7B600C191F1 /* Assets.xcassets */; };
@@ -15,7 +18,7 @@
 		81352185204DCBBC00C191F1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81352183204DCBBC00C191F1 /* Interface.storyboard */; };
 		81352187204DCBBC00C191F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81352186204DCBBC00C191F1 /* Assets.xcassets */; };
 		8135218E204DCBBC00C191F1 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8135218D204DCBBC00C191F1 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		81352193204DCBBC00C191F1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81352192204DCBBC00C191F1 /* InterfaceController.swift */; };
+		81352193204DCBBC00C191F1 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81352192204DCBBC00C191F1 /* Controller.swift */; };
 		81352195204DCBBC00C191F1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81352194204DCBBC00C191F1 /* ExtensionDelegate.swift */; };
 		81352197204DCBBC00C191F1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81352196204DCBBC00C191F1 /* ComplicationController.swift */; };
 		81352199204DCBBC00C191F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81352198204DCBBC00C191F1 /* Assets.xcassets */; };
@@ -86,6 +89,9 @@
 		030699D67A468728B1E30E0E /* Pods-watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watch.release.xcconfig"; path = "Pods/Target Support Files/Pods-watch/Pods-watch.release.xcconfig"; sourceTree = "<group>"; };
 		3EC051AB05855EB5D9A49B55 /* Pods-ataf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ataf.release.xcconfig"; path = "Pods/Target Support Files/Pods-ataf/Pods-ataf.release.xcconfig"; sourceTree = "<group>"; };
 		75C7FD027FBF736B9081E92C /* Pods-ataf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ataf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ataf/Pods-ataf.debug.xcconfig"; sourceTree = "<group>"; };
+		812055E7204F222300EF6DBE /* Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		812055E8204F222300EF6DBE /* TransitRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitRow.swift; sourceTree = "<group>"; };
+		812055E9204F222400EF6DBE /* BusStopRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopRow.swift; sourceTree = "<group>"; };
 		8135216A204DC7B600C191F1 /* ataf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ataf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8135216D204DC7B600C191F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81352172204DC7B600C191F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,7 +103,7 @@
 		81352186204DCBBC00C191F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81352188204DCBBC00C191F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8135218D204DCBBC00C191F1 /* watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81352192204DCBBC00C191F1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		81352192204DCBBC00C191F1 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		81352194204DCBBC00C191F1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		81352196204DCBBC00C191F1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		81352198204DCBBC00C191F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,9 +219,12 @@
 		81352191204DCBBC00C191F1 /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				81352192204DCBBC00C191F1 /* InterfaceController.swift */,
+				81352192204DCBBC00C191F1 /* Controller.swift */,
 				81352194204DCBBC00C191F1 /* ExtensionDelegate.swift */,
 				81352196204DCBBC00C191F1 /* ComplicationController.swift */,
+				812055E9204F222400EF6DBE /* BusStopRow.swift */,
+				812055E7204F222300EF6DBE /* Detail.swift */,
+				812055E8204F222300EF6DBE /* TransitRow.swift */,
 				81352198204DCBBC00C191F1 /* Assets.xcassets */,
 				8135219A204DCBBC00C191F1 /* Info.plist */,
 			);
@@ -578,10 +587,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812055EB204F222400EF6DBE /* TransitRow.swift in Sources */,
 				81CE4D6A204F057D00FF35E4 /* Serialize.swift in Sources */,
+				812055EA204F222400EF6DBE /* Detail.swift in Sources */,
 				81CE4D67204F054A00FF35E4 /* Network.swift in Sources */,
+				812055EC204F222400EF6DBE /* BusStopRow.swift in Sources */,
 				81352195204DCBBC00C191F1 /* ExtensionDelegate.swift in Sources */,
-				81352193204DCBBC00C191F1 /* InterfaceController.swift in Sources */,
+				81352193204DCBBC00C191F1 /* Controller.swift in Sources */,
 				81352197204DCBBC00C191F1 /* ComplicationController.swift in Sources */,
 				81CE4D63204EFCD400FF35E4 /* Models.swift in Sources */,
 			);
@@ -743,8 +755,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y4562FZWB;
+				DEVELOPMENT_TEAM = Z2R74B6XXC;
 				INFOPLIST_FILE = "$(SRCROOT)/ataf/Stuff/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.ned.ataf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -759,8 +772,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y4562FZWB;
+				DEVELOPMENT_TEAM = Z2R74B6XXC;
 				INFOPLIST_FILE = "$(SRCROOT)/ataf/Stuff/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.ned.ataf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -777,7 +791,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y4562FZWB;
+				DEVELOPMENT_TEAM = Z2R74B6XXC;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Watch App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = it.ned.ataf.watchkitapp;
@@ -787,7 +801,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -799,7 +813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y4562FZWB;
+				DEVELOPMENT_TEAM = Z2R74B6XXC;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Watch App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = it.ned.ataf.watchkitapp;
@@ -809,7 +823,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -820,7 +834,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y4562FZWB;
+				DEVELOPMENT_TEAM = Z2R74B6XXC;
 				INFOPLIST_FILE = "watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.ned.ataf.watchkitapp.watchkitextension;
@@ -830,7 +844,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -841,7 +855,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y4562FZWB;
+				DEVELOPMENT_TEAM = Z2R74B6XXC;
 				INFOPLIST_FILE = "watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.ned.ataf.watchkitapp.watchkitextension;
@@ -851,7 +865,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};

@@ -146,7 +146,7 @@ class BusStop: Equatable {
             for i in 0..<from.count {
                 if let node = from[orderedData[i]] {
                     dict.append([
-                        "name": orderedData[i].trimmingCharacters(in: .whitespaces),
+                        "name": trimWhiteSpace(from: orderedData[i]),
                         "node": node
                     ])
                 }
@@ -162,6 +162,16 @@ class BusStop: Equatable {
             var arr = [BusStop]()
             for stop in stops { arr.append(BusStop(dictionary: stop)) }
             return arr
+        }
+        
+        class func trimWhiteSpace(from string: String) -> String {
+            if let idx = string.index(of: " ") {
+                let pos = string.distance(from: string.startIndex, to: idx)
+                var to = string
+                to.removeFirst(pos+1)
+                return to
+            }
+            return ""
         }
     }
     
