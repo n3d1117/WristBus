@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.0)
+  - CryptoSwift (0.7.1)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift.git`, branch `swift4`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: swift4
+    :git: https://github.com/krzyzanowskim/CryptoSwift.git
+
+CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: 25241ab5203e828906bbf70208b07640d2d84c69
+    :git: https://github.com/krzyzanowskim/CryptoSwift.git
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  CryptoSwift: 03d1267938034bbee88fce1bd78720e943bdbcf8
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: eb8100898d05fabbed962d0bac69c41d417c7998
+
+COCOAPODS: 1.4.0
