@@ -32,7 +32,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
-        handler(nil)
+        
+        let modularTemplate = CLKComplicationTemplateModularSmallSimpleImage()
+        let image = CLKImageProvider(onePieceImage: #imageLiteral(resourceName: "Complication/Modular"))
+        image.tintColor = UIColor(red: 83.0/255.0, green: 74.0/255.0, blue: 172/255.0, alpha: 1)
+        modularTemplate.imageProvider = image
+        modularTemplate.tintColor = UIColor(red: 83.0/255.0, green: 74.0/255.0, blue: 172.0/255.0, alpha: 1)
+        let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: modularTemplate)
+        handler(timelineEntry)
     }
     
     func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
@@ -48,8 +55,21 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Placeholder Templates
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
-        // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        let modularTemplate = CLKComplicationTemplateModularSmallSimpleImage()
+        let image = CLKImageProvider(onePieceImage: #imageLiteral(resourceName: "Complication/Modular"))
+        image.tintColor = UIColor(red: 83.0/255.0, green: 74.0/255.0, blue: 172/255.0, alpha: 1)
+        modularTemplate.imageProvider = image
+        modularTemplate.tintColor = UIColor(red: 83.0/255.0, green: 74.0/255.0, blue: 172.0/255.0, alpha: 1)
+        handler(modularTemplate)
+    }
+    
+    func getPlaceholderTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
+        let modularTemplate = CLKComplicationTemplateModularSmallSimpleImage()
+        let image = CLKImageProvider(onePieceImage: #imageLiteral(resourceName: "Complication/Modular"))
+        image.tintColor = UIColor(red: 83.0/255.0, green: 74.0/255.0, blue: 172/255.0, alpha: 1)
+        modularTemplate.imageProvider = image
+        modularTemplate.tintColor = UIColor(red: 83.0/255.0, green: 74.0/255.0, blue: 172.0/255.0, alpha: 1)
+        handler(modularTemplate)
     }
     
 }

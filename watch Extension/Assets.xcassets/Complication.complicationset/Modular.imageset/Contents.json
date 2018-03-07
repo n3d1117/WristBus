@@ -2,12 +2,14 @@
   "images" : [
     {
       "idiom" : "watch",
-      "screenWidth" : "{130,145}",
+      "filename" : "n3d_52.png",
+      "screen-width" : "<=145",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "screenWidth" : "{146,165}",
+      "filename" : "bus_logo-1.png",
+      "screen-width" : ">145",
       "scale" : "2x"
     }
   ],
