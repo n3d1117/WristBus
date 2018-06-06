@@ -50,9 +50,10 @@ class Controller: WKInterfaceController {
     
     func processApplicationContext() {
         if let context = session?.receivedApplicationContext {
-            
-            if let c = context as? [String : String] {
-                BusStop.saveStopsLocally(from: c)
+            if let c = context as? [String: String] {
+                if !c.isEmpty {
+                    BusStop.saveStopsLocally(from: c)
+                }
                 stopsTable.setNumberOfRows(stops.count, withRowType: "stop_row")
                 for index in 0..<stops.count {
                     if let controller = stopsTable.rowController(at: index) as? BusRow {
