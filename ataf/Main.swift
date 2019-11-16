@@ -29,9 +29,12 @@ class Main: UITableViewController, UIViewControllerPreviewingDelegate, canAddBus
         
         let logo = #imageLiteral(resourceName: "logo")
         let imageViewLogo = UIImageView(image: logo)
-        imageViewLogo.frame = CGRect(x: 0, y: 0, width: 0, height: 23)
+        imageViewLogo.frame = CGRect(x: 0, y: 0, width: 0, height: 18)
         imageViewLogo.contentMode = .scaleAspectFit
         navigationItem.titleView = imageViewLogo
+        
+        // Hide 'Back' text on next screen
+        self.title = ""
         
         // Register for 3D Touch
         if #available(iOS 9.0, *) {
@@ -100,10 +103,7 @@ class Main: UITableViewController, UIViewControllerPreviewingDelegate, canAddBus
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show_stop" {
-            
-            // Hide 'Back' text on next screen
-            navigationItem.backBarButtonItem = UIBarButtonItem()
-            
+
             if let index = tableView.indexPathForSelectedRow, let vc = segue.destination as? Detail {
                 vc.stop = stops[index.row]
             }
@@ -166,7 +166,6 @@ extension Main : WCSessionDelegate {
     
     func sendDataToWatch() {
         if let validSession = session, validSession.isReachable {
-            print("hi")
             do {
                 try validSession.updateApplicationContext(BusStop.unorderedWrappedDataForWatch())
             } catch {
@@ -182,5 +181,29 @@ extension Main : WCSessionDelegate {
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
+    }
+}
+
+// MARK: - iOS 13 Context Menus
+
+@available(iOS 13.0, *)
+extension Main {
+
+    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+
+        guard stops.indices.contains(indexPath.row) else { return nil }
+
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? Detail else { return nil }
+        vc.stop = stops[indexPath.row]
+        
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: { UINavigationController(rootViewController: vc) })
+    }
+
+    override func tableView(_ tableView: UITableView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
+        animator.addCompletion {
+            if let nav = animator.previewViewController as? UINavigationController {
+                self.show(nav.viewControllers[0], sender: self)
+            }
+        }
     }
 }

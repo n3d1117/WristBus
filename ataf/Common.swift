@@ -8,7 +8,14 @@
 
 import UIKit
 
-let tableViewBackgroundColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 244/255.0, alpha: 1)
+var tableViewBackgroundColor: UIColor {
+    if #available(iOS 13.0, *) {
+        return UIColor.systemBackground
+    } else {
+        return UIColor(red: 239/255.0, green: 239/255.0, blue: 244/255.0, alpha: 1)
+    }
+}
+
 let purple = UIColor(red: 83/255.0, green: 74/255.0, blue: 172/255.0, alpha: 1)
 
 protocol canAddBusStop { func addStop(stop: BusStop) }

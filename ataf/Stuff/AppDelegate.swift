@@ -18,17 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = purple
         UINavigationBar.appearance().tintColor = UIColor.white
-        UIApplication.shared.statusBarStyle = .lightContent
-        
+
         return true
     }
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        if let tab = self.window?.rootViewController as? UITabBarController {
-            if let v: UINavigationController = tab.viewControllers?[0] as? UINavigationController {
-                if let c: Main = v.viewControllers[0] as? Main, let index = Int(shortcutItem.type) {
-                    c.performShortcutSegue(index)
-                }
+        if let nav = self.window?.rootViewController as? UINavigationController {
+            if let c: Main = nav.viewControllers[0] as? Main, let index = Int(shortcutItem.type) {
+                c.performShortcutSegue(index)
             }
         }
     }
