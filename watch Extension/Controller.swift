@@ -15,7 +15,7 @@ class Controller: WKInterfaceController {
     @IBOutlet weak var stopsTable: WKInterfaceTable!
     
     private let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
-    var stops : [BusStop] { return BusStop.allStops() }
+    var stops: [BusStop] { return BusStop.allStops() }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
